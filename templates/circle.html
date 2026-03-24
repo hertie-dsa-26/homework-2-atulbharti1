@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Calculator</title>
+</head>
+<body>
+    <h1>Circle Calculator</h1>
+
+    <form method="POST">
+        <input type="text" name="radius" placeholder="Enter radius" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if perimeter is defined and area is defined %}
+        <p>Perimeter: {{ perimeter }}</p>
+        <p>Area: {{ area }}</p>
+    {% endif %}
+
+    {% if printed_result %}
+        <p>{{ printed_result }}</p>
+    {% endif %}
+</body>
+</html>
